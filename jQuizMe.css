@@ -1,0 +1,341 @@
+/*
+* jQuizMe - jQuery quiz plugin
+*
+* @version 2.2.1
+* @date 10/09/2012
+* Search : EllStudiosApp
+*/
+
+.q-help-btn{  /*Bantuan */
+    border-radius: 8px;
+	background-color: #9ad14f; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.q-quit-btn{  /*Keluar */
+    border-radius: 8px;
+	background-color: #e30376; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+.q-quitYes-btn{ /*Konfirmasi Ya */
+    border-radius: 8px;
+	background-color: #9ad14f; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+.q-quitNo-btn{ /*Konfirmasi Tidak */
+    border-radius: 8px;
+	background-color: #e30376; /* Red */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+.q-begin-btn{ /*Mulai */
+	background-color: #028795; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+.q-check-btn{
+  background-color: #028795; /* Green */
+  border: none;
+  color: white;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+    border-radius: 8px;
+  margin-right: 10px;
+}
+.q-next-btn{
+	background-color: #9ad14f; /* Green */
+  border: none;
+  float: right;
+  color: white;
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+    border-radius: 8px;
+
+}
+.q-next-btn :disabled, input[disabled]{
+    border-radius: 8px;
+  background-color: #cccccc; /* Green */
+}
+.q-details-btn{ /* Detail */
+    border-radius: 8px;
+	background-color: #028795; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+.q-review-btn{ /* Ulasan */
+    border-radius: 8px;
+	background-color: #9ad14f; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+.q-restart-btn{ /* Ulangi */
+    border-radius: 8px;
+    background-color: #9ad14f; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.q-del-btn{ /* Hapus */
+    border-radius: 8px;
+    background-color: #e30376; /* Red */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
+.q-ques{
+  text-align: justify;
+  border-bottom: thin solid black;
+}
+.q-radioBtn{
+	margin-right: 8px;
+}
+.q-leftArrow{
+	background-color: #028795; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    width: 80px;
+}
+.q-rightArrow{
+	background-color: #028795; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    width: 80px;
+}
+body {
+	margin: 0 auto;
+
+	padding-bottom :100px;
+	padding-top :0px;
+	padding-left :0px;
+	padding-right :0px;
+}
+.quiz-el{
+	background: #ffffff;
+	font-size: 100%;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+	/* padding: 0.2em; */
+}
+.quiz-el div{
+	padding: 0.2em;
+}
+.quiz-el input{
+	font-size: 100%;
+}
+/* .q-innerArea = .q-header, .q-help, .q-prob, .q-intro, .q-gameOver */
+.q-innerArea{
+	background: #ffffff;
+	position:relative;
+	clear: both;
+	color: black;
+}
+.q-header{
+	background-color: #01a8ba ;
+	color: #FFF;
+}
+.q-header, .q-help, .q-review-menu {
+	border-bottom: thin black solid;
+}
+.q-intro{
+	padding: 0.2em;
+	text-align: center;
+}
+.q-title{
+	overflow: hidden;
+	width: 80%;
+	margin: 0;
+}
+/*This is a hack, because IE fails on float:right.*/
+.q-counter{
+	position: absolute;
+	top: 0%;
+	right: 0%;
+	margin: 1%;
+	padding: 0%;
+}
+.q-counter{
+	float: right;
+}
+.q-help{
+	position: relative;
+	clear:both;
+}
+/*.q-probArea = .q-ques, .q-ansSel, .q-result */
+.q-probArea{
+	background: #fff;
+	font-size: 100%;
+	position: relative;
+    border-radius: 3px;
+}
+.q-help-menu{
+	width: 97%;
+}
+.q-help-info{
+	clear:both;
+}
+.q-quit-confirm, .q-quit-area, .q-review-arrows{
+	display: inline;
+	width: auto;
+}
+.q-quit-area{
+	float: right;
+}
+.q-review-arrows{
+	position: relative;	/*IE hack.*/
+	width: 2.3em;
+}
+.q-center{
+	text-align: center;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.q-gameOver .q-statTotal{
+	color: blue;
+}
+.q-quesInput{
+	width: 95%;
+}
+.q-ol{
+	list-style-type: upper-alpha;
+	list-style-position: inside;
+	padding: 0;
+	margin: 0;
+}
+.q-ol-li{
+	margin: 0.4em auto 0.4em auto;
+    padding: 4px;
+    border-radius: 8px;
+}
+.q-ol-hover{
+	background: #777777;
+}
+.q-ol-active{
+	background: #01a8ba ;
+	color: #FFF;
+}
+/*IE displays the wrong width for <select> tags.*/
+.q-select{
+	width : 80%;
+}
+.q-select{
+	font-size: 100%;
+	width: 100%;
+}
+.q-timer-area{
+	display:block;
+	text-align:center;
+	width: auto;
+}
+.q-review-menu{
+	text-align: center;
+	width: auto;
+}
+.q-reviewBar-btns{
+	position: relative;
+	display: inline-block;
+	width: 49%;
+}
+.q-rightArrow{
+	float:right;
+}
+.q-leftArrow{
+	float:left;
+}
+.q-timer-area{
+	line-height: 0;
+	height:0;
+}
+.q-result {
+	padding: 0;
+	background-color: #01a8ba ;
+	color: #FFF;
+}
+
+.q-review-index-all{
+	/* background-color: #9ad14f; /* Green */ */
+    border: none;
+    color: black;
+    padding: 12px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+}
